@@ -1,0 +1,9 @@
+{
+  "appId": "com.example.tally",
+  "appName": "Tally",
+  "webDir": "www",
+  "backgroundColor": "#0A0D16",
+  "server": {
+    "androidScheme": "https"
+  }
+}

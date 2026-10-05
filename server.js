@@ -176,7 +176,7 @@ if(require.main === module){
     await client.connect();
     const db = client.db(process.env.MONGODB_DB || 'tally');
     await db.collection('users').createIndex({ username: 1 }, { unique: true });
-    const app = createApp({ db, jwtSecret: secret, corsOrigin: process.env.CORS_ORIGIN, staticDir: path.join(__dirname, 'www') });
+    const app = createApp({ db, jwtSecret: secret, corsOrigin: process.env.CORS_ORIGIN, staticDir: path.join(__dirname) });
     const port = process.env.PORT || 3000;
     app.listen(port, () => console.log(`Tally is running on port ${port}`));
   })().catch(e => { console.error('Could not start:', e.message); process.exit(1); });
